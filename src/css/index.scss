@@ -1,0 +1,36 @@
+body {
+    background-color: #141414;
+    font-family: jost;
+    color: white;
+    margin: 1rem;
+}
+
+.header-buttons div {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+
+    &:hover {
+        background-color: white;
+        color: #141414;
+    }
+}
+
+#top-text:before {
+    content: '3';
+}
+
+.platform-title {
+    display: none;
+}
+
+.section-title {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+}
+
+@media (min-width: 1280px) {
+    #top-text:before {
+        content: '5';
+    }
+}
