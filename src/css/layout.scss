@@ -48,11 +48,15 @@ ul {
     font-size: 26px;
 }
 
+.all {
+    margin-top: 1.5em;
+    padding: 0.8em;
+
+}
+
 .top, .first, .second {
     display: flex;
     padding: 1.5rem 0;
-    overflow-x: auto;
-    overflow-y: hidden;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     flex-direction: row;
@@ -64,33 +68,35 @@ ul {
      flex-wrap: nowrap;
 
      img {
-        min-width: 225px;
+        min-width: 225px;    
+    &:hover{
+        transform:scale(1.2);
+        -ms-transform:scale(1.2); // IE 9 
+        -moz-transform:scale(1.2); // Firefox 
+        -webkit-transform:scale(1.2); // Safari and Chrome 
+        -o-transform:scale(1.2); // Opera
+        }  
+    }
+}
+
+
+.first, .second {
+    img {
+        min-width: 250px;;
     &:hover{
         -webkit-transform:scale(1.25);
         -moz-transform:scale(1.25);
         -ms-transform:scale(1.25);
         -o-transform:scale(1.25);
         transform:scale(1.25);
-      }  
+        }  
     }
- }
-
-.first, .second {
-    img {
-        min-width: 250px;;
-    &:hover{
-            -webkit-transform:scale(1.25);
-            -moz-transform:scale(1.25);
-            -ms-transform:scale(1.25);
-            -o-transform:scale(1.25);
-            transform:scale(1.25);
-          }  
-        }
 }
 
 .item {
     flex-grow: 1;
     padding-top: 1rem;
+    cursor: pointer;
 }
 
 img {
@@ -108,7 +114,7 @@ img {
         display: flex;
     }
 
-    .top {
+    .top, .first, .second {
         flex-direction: row-reverse;
     }
 
@@ -141,6 +147,8 @@ img {
     }
 }
 
-@media (min-width: 1500px) {
-    
+@media only screen and (max-width: 480px){
+    .navbar .logo-box > span {
+        display: none;
+    }
 }
